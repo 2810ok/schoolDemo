@@ -1,0 +1,43 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .navbar {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+
+  .navbar-links button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+  }
+  
+  .navbar-links button:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Ensures the router outlet is displayed below the navbar */
+  router-outlet {
+    margin-top: 20px;
+  }
+  

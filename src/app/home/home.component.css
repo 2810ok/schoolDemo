@@ -1,0 +1,24 @@
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+
+  .school-logo {
+    max-width: 500px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+
+  .school-name {
+    font-size: 2.5rem;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  

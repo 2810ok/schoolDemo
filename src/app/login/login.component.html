@@ -1,0 +1,22 @@
+<br>
+<div class="login-card">
+    <form (ngSubmit)="submit()" [formGroup]="loginForm">
+      <div class="form-group">
+        <input type="email" placeholder="Enter email" formControlName="userName" />
+        <div *ngIf="loginForm.get('userName')?.invalid && (loginForm.get('userName')?.touched || loginForm.get('userName')?.dirty)">
+          <span *ngIf="loginForm.get('userName')?.errors?.['required']">Enter a valid email</span>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <input type="password" placeholder="Enter password" formControlName="password" />
+        <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.touched || loginForm.get('password')?.dirty)">
+          <span *ngIf="loginForm.get('password')?.errors?.['required']">Enter a valid password</span>
+          <span *ngIf="loginForm.get('password')?.errors?.['maxlength']">Password cannot exceed 5 characters</span>
+        </div>
+      </div>
+  
+      <button type="submit" [disabled]="loginForm.invalid">Submit</button>
+    </form>
+  </div>
+  
