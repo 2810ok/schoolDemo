@@ -1,0 +1,29 @@
+<form [formGroup]="addressForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="pincode">Pincode:</label>
+      <input
+        id="pincode"
+        type="text"
+        formControlName="pincode"
+        (blur)="onPincodeBlur()"
+      />
+      <div *ngIf="pincodeControl.dirty && pincodeControl.hasError('required')">
+        Pincode is required.
+      </div>
+    </div>
+  
+    <div>
+      <label for="city">City:</label>
+      <input
+        id="city"
+        type="text"
+        formControlName="city"
+      />
+      <div *ngIf="cityControl.hasError('required')">
+        City is required if pincode is changed.
+      </div>
+    </div>
+  
+    <button type="submit" [disabled]="addressForm.invalid">Submit</button>
+  </form>
+  
